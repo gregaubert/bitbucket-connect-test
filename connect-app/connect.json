@@ -1,0 +1,168 @@
+{
+  "key": "sonarqube-connect-test",
+  "name": "Sonarqube connect test",
+  "description": "Sonarqube connect app test",
+  "baseUrl": "https://3b4b27bd.ngrok.io",
+  "authentication": {
+    "type": "jwt"
+  },
+  "modules": {
+    "adminPage": [
+      {
+        "key": "adminrepo",
+        "name": {
+          "value": "Greg's Repo Admin"
+        },
+        "url":
+          "connect-app/test.html?repo_uuid={repo_uuid}&repo_name={repository.name}",
+        "location": "org.bitbucket.repository.admin"
+      }
+    ],
+    "configurePage": {
+      "key": "configurepage",
+      "name": {
+        "value": "Greg's Configure Page"
+      },
+      "url":
+        "connect-app/test.html?repo_uuid={repo_uuid}&repo_name={repository.name}"
+    },
+    "fileViews": [
+      {
+        "key": "fileviewer",
+        "name": {
+          "value": "Greg's File view"
+        },
+        "url":
+          "connect-app/test.html?repo_uuid={repo_uuid}&repo_name={repository.name}",
+        "file_matches": { "extensions": ["md"] }
+      }
+    ],
+    "generalPage": [
+      {
+        "key": "generalpage",
+        "name": {
+          "value": "Greg's General Page"
+        },
+        "url":
+          "connect-app/test.html?repo_uuid={repo_uuid}&repo_name={repository.name}"
+      }
+    ],
+    "helpPanel": [
+      {
+        "key": "helppage",
+        "name": {
+          "value": "Greg's Help panel"
+        },
+        "url":
+          "connect-app/test.html?repo_uuid={repo_uuid}&repo_name={repository.name}"
+      }
+    ],
+    "profileTab": [
+      {
+        "key": "profilepage",
+        "name": {
+          "value": "Greg's Profile Tab"
+        },
+        "url":
+          "connect-app/test.html?repo_uuid={repo_uuid}&repo_name={repository.name}"
+      }
+    ],
+    "repoPage": [
+      {
+        "key": "repositorynavigation",
+        "name": {
+          "value": "Greg's navigation"
+        },
+        "url":
+          "connect-app/test.html?repo_uuid={repo_uuid}&repo_name={repository.name}",
+        "location": "org.bitbucket.repository.navigation",
+        "params": {
+          "auiIcon": "aui-iconfont-pages"
+        }
+      },
+      {
+        "key": "repositoryactions",
+        "name": {
+          "value": "Greg's actions"
+        },
+        "url":
+          "connect-app/test.html?repo_uuid={repo_uuid}&repo_name={repository.name}",
+        "location": "org.bitbucket.repository.actions",
+        "params": {
+          "auiIcon": "aui-iconfont-pages"
+        }
+      },
+      {
+        "key": "sonarqube",
+        "name": {
+          "value": "Sonarqube"
+        },
+        "url": "/projects",
+        "location": "org.bitbucket.repository.navigation",
+        "params": {
+          "auiIcon": "aui-iconfont-blogroll"
+        }
+      }
+    ],
+    "webItem": [
+      {
+        "key": "webitembranchinfo",
+        "location": "org.bitbucket.branch.summary.info",
+        "name": {
+          "value": "Greg's WebItem Branch Info"
+        },
+        "url":
+          "connect-app/test.html?repo_uuid={repo_uuid}&repo_name={repository.name}",
+        "params": {
+          "auiIcon": "aui-iconfont-pages"
+        },
+        "target": {
+          "options": {
+            "size": "medium"
+          },
+          "type": "dialog"
+        }
+      },
+      {
+        "key": "webitemprinfo",
+        "location": "org.bitbucket.pullrequest.summary.info",
+        "name": {
+          "value": "Greg's WebItem PR Info"
+        },
+        "url":
+          "connect-app/test.html?repo_uuid={repo_uuid}&repo_name={repository.name}",
+        "params": {
+          "auiIcon": "aui-iconfont-pages"
+        }
+      }
+    ],
+    "webPanel": [
+      {
+        "key": "webpanelrepooverview",
+        "location": "org.bitbucket.repository.overview.informationPanel",
+        "name": {
+          "value": "Greg's WebPanel Repo Overview"
+        },
+        "url":
+          "connect-app/test.html?repo_uuid={repo_uuid}&repo_name={repository.name}"
+      },
+      {
+        "key": "webpanelproverview",
+        "location": "org.bitbucket.pullrequest.overview.informationPanel",
+        "name": {
+          "value": "Greg's WebPanel PR Overview"
+        },
+        "url":
+          "connect-app/test.html?repo_uuid={repo_uuid}&repo_name={repository.name}"
+      }
+    ]
+  },
+  "scopes": [
+    "repository:write",
+    "pullrequest:write",
+    "issue:write",
+    "webhook",
+    "pipeline:write"
+  ],
+  "contexts": ["account"]
+}

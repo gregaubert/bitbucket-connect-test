@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://bitbucket.org/atlassian-connect/all.js"></script>
+</head>
+
+<body>
+  <p style="color: green"></p>
+  <script>
+    const repoUuid = decodeURIComponent(location.search.match(/[\?&]repo_uuid=([^\&]*)/)[1]);
+    const repoName = decodeURIComponent(location.search.match(/[\?&]repo_name=([^\&]*)/)[1]);
+    const p = document.querySelector('p');
+    p.innerText = 'Repo name: ' + repoName + ' / Repo uuid: ' + repoUuid;
+  </script>
+</body>
+
+</html>
