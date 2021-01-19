@@ -1,4 +1,4 @@
-# bitbucket-connect-test
+# sonarcloud-bitbucket-connect-test
 
 ## How to install the test app on bitbucket cloud ?
 
